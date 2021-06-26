@@ -24,8 +24,8 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravel
-DB_USERNAME=demo
-DB_PASSWORD=demo
+DB_USERNAME=
+DB_PASSWORD=
 ```
 
 Create DB Tables
@@ -45,3 +45,9 @@ Seed DB Tables with records
 ``
 php artisan db:seed
 ``
+
+Now you should have user
+---
+Username`Demo`  
+Email `demo@demo.com`   
+Password `demo`
