@@ -22,7 +22,10 @@ class JobFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'summary' => $this->faker->sentence(),
+            'description' => $this->faker->paragraph(),
+            'status' => 'open',
+            'property_id' => $this->faker->numberBetween(0, 100),
         ];
     }
 }

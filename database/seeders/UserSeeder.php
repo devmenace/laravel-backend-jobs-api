@@ -3,9 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Job;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class JobSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +15,10 @@ class JobSeeder extends Seeder
      */
     public function run()
     {
-        Job::factory(15)->create();
+        User::create([
+            'name' => 'Demo',
+            'email' => 'demo@demo.com',
+            'password' => bcrypt('demo'),
+        ]);
     }
 }

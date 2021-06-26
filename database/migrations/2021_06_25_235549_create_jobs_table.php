@@ -18,7 +18,7 @@ class CreateJobsTable extends Migration
             $table->string('summary', 150);
             $table->string('description', 500);
             $table->enum('status', ['open', 'in_progress', 'completed', 'cancelled']);
-            $table->integer('property_relation',);
+            $table->integer('property_id',);
             $table->timestamps();
         });
     }

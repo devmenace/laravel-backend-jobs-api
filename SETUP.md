@@ -33,3 +33,15 @@ Create DB Tables
 ``
 php artisan migrate
 ``
+
+Dump ad recreate DB Tables
+---
+``
+php artisan migrate:fresh
+``
+
+Seed DB Tables with records
+---
+``
+php artisan db:seed
+``
