@@ -5,6 +5,10 @@ namespace Database\Seeders;
 use App\Models\Property;
 use Illuminate\Database\Seeder;
 
+/**
+ * Class PropertySeeder
+ * @package Database\Seeders
+ */
 class PropertySeeder extends Seeder
 {
     /**

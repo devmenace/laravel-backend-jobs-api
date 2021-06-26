@@ -3,8 +3,13 @@
 namespace Database\Factories;
 
 use App\Models\Job;
+use App\Models\Property;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * Class JobFactory
+ * @package Database\Factories
+ */
 class JobFactory extends Factory
 {
     /**
@@ -25,7 +30,9 @@ class JobFactory extends Factory
             'summary' => $this->faker->sentence(),
             'description' => $this->faker->paragraph(),
             'status' => 'open',
-            'property_id' => $this->faker->numberBetween(0, 100),
+            'property_id' => function () {
+                return Property::all()->random();
+            },
         ];
     }
 }

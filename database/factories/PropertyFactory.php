@@ -5,6 +5,10 @@ namespace Database\Factories;
 use App\Models\Property;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * Class PropertyFactory
+ * @package Database\Factories
+ */
 class PropertyFactory extends Factory
 {
     /**

@@ -5,6 +5,10 @@ namespace Database\Seeders;
 use App\Models\Job;
 use Illuminate\Database\Seeder;
 
+/**
+ * Class JobSeeder
+ * @package Database\Seeders
+ */
 class JobSeeder extends Seeder
 {
     /**
