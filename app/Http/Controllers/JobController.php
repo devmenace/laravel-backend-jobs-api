@@ -13,69 +13,45 @@ class JobController extends Controller
         return Job::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'summary' => 'required',
+            'description' => 'required',
+            'status' => 'required',
+            'property_id' => 'required'
+        ]);
+
+        return Job::create($request->all());
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         return Job::find($id);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param Job $job
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Job $job)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param Job $job
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Job $job)
+
+    public function update(Request $request, $id)
     {
-        //
+        $product = Job::find($id);
+        $product->update($request->all());
+        return $product;
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Job $job
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Job $job)
+    public function destroy(Job $id)
     {
-        //
+        return Job::destroy($id);
     }
 }

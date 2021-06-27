@@ -14,7 +14,12 @@ class Job extends Model
 {
     use HasFactory;
 
-//    protected $fillable = [''];
+    protected $fillable = [
+        'summary',
+        'description',
+        'status',
+        'property_id'
+    ];
 
     /**
      * @return BelongsTo
