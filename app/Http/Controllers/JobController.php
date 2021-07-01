@@ -13,13 +13,6 @@ class JobController extends Controller
         return Job::all();
     }
 
-
-    public function create()
-    {
-
-
-    }
-
     public function store(Request $request)
     {
         $request->validate([
@@ -50,7 +43,7 @@ class JobController extends Controller
         return $product;
     }
 
-    public function destroy(Job $id)
+    public function destroy($id): int
     {
         return Job::destroy($id);
     }

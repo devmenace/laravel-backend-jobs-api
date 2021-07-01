@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::apiResource('/jobs', JobController::class);
+//Route::resource('/jobs', JobController::class);
 
 //Route::get('/jobs', function () {
 //    return \App\Models\Job::all();
@@ -23,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/jobs', [JobController::class, 'index']);
 Route::get('/jobs/{id}', [JobController::class, 'show']);
+Route::post('/jobs', [JobController::class, 'store']);
+Route::put('/jobs/{id}', [JobController::class, 'update']);
+Route::delete('/jobs/{id}', [JobController::class, 'destroy']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
