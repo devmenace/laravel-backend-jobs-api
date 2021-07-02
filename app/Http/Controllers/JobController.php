@@ -53,9 +53,9 @@ class JobController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $product = Job::find($id);
-        $product->update($request->all());
-        return $product;
+        $job = Job::find($id);
+        $job->update($request->all());
+        return $job;
     }
 
     /**
