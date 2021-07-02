@@ -30,11 +30,6 @@ class JobController extends Controller
         return Job::find($id);
     }
 
-    public function edit(Job $job)
-    {
-        //
-    }
-
 
     public function update(Request $request, $id)
     {
