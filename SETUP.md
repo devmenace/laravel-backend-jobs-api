@@ -1,7 +1,7 @@
-Clone repository
+Laravel backend repository
 ---
 ``
-git clone git@github.com:devmenace/laravel-backend-jobs-api.git
+git clone https://github.com/devmenace/laravel-backend-jobs-api.git
 ``
 
 Install dependencies
@@ -51,3 +51,20 @@ Now you should have user
 Username`Demo`  
 Email `demo@demo.com`   
 Password `demo`
+
+Username`Admin`  
+Email `admin@admin.com`   
+Password `admin`
+
+Username`Test`  
+Email `test@test.com`   
+Password `test`
+
+--------------
+
+Angular client repository
+---
+
+``
+git clone https://github.com/devmenace/angular-api-client.git
+``
